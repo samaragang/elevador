@@ -1,0 +1,40 @@
+.catalog {
+  margin-bottom: 68px;
+}
+
+.catalog-item {
+  width: 450px;
+  height: 565px;
+}
+.catalog-item__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+}
+.catalog-item__image { 
+  width: 400px;
+  height: 360px;
+  border-radius: 8px; 
+  overflow: hidden; 
+ } 
+  
+ .catalog-item__image img { 
+  width:100%; 
+  height:100%; 
+  object-fit: cover; 
+ }
+
+ .catalog-item__title {
+  color: #262626;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 24px;
+ }
+ .catalog-item__description {
+  font-size: 20px;
+  font-weight: 500;
+  color: #6A6B72;
+  margin-top: 16px;
+ }

@@ -1,0 +1,68 @@
+@import url("/src/index.css");
+
+.footer {
+  background-color: var(--main-color);
+  color: white;
+  padding: 64px 0 14px 0;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.footer-left,
+.footer-left__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.footer-left {
+  row-gap: 24px;
+}
+
+.footer-left__nav {
+  row-gap: 8px;
+}
+
+.footer-left__logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-left__nav-item {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.footer-right {
+  row-gap: 8px;
+}
+
+.footer-right__social {
+  display: flex;
+  column-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-right__social-item {
+  cursor: pointer;
+
+}
+
+.copy-rigth {
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}

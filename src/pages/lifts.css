@@ -1,0 +1,27 @@
+.lifts {
+  font-size: 24px;
+}
+
+.passenger-lifts__cases-title {
+  color: var(--main-color);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.passenger-lifts__cases-title a {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+.passenger-lifts__cases-content {
+  display: flex;
+  gap: 16px;
+}
+
+.passenger-lifts,
+.cargo-lifts,
+.hospital-lifts,
+.other-details {
+  margin-bottom: 48px;
+}

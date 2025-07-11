@@ -1,0 +1,8 @@
+.escalators {
+  font-size: 24px;
+}
+
+.escalators-info {
+  display: flex;
+  gap: 24px;
+}

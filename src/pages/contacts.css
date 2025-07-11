@@ -1,0 +1,12 @@
+.contacts-info {
+  margin-bottom: 48px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contacts-info span {
+  color: var(--main-color);
+}

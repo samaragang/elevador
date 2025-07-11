@@ -1,0 +1,34 @@
+.intro {
+  width: 1920px;
+  height: 720px;
+  background-image: url('/intro-bg.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 64px 0;
+}
+
+.hero-content {
+  text-align: center;
+  letter-spacing: 2.2px;
+  font-weight: 500;
+}
+
+.hero-content__title {
+  font-family: "Unbounded", sans-serif;
+  font-size: 72px;
+  color: var(--main-color);
+  margin-bottom: 48px;
+}
+
+.hero-content__description {
+  font-size: 32px;
+  color: black;
+}

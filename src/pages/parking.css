@@ -1,0 +1,8 @@
+.parking {
+  font-size: 24px;
+}
+
+.parking-info {
+  display: flex;
+  gap: 24px;
+}
