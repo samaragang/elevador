@@ -1,5 +1,8 @@
 import React from 'react';
 import './footer.css';
+import Inst from '/src/assets/icons/inst.svg'
+import Tg from '/src/assets/icons/tg.svg'
+import Viber from '/src/assets/icons/viber.svg'
 
 function Footer() {
   return (
@@ -18,13 +21,13 @@ function Footer() {
           <div className="footer-right">
             <div className="footer-right__social">
               <button className="footer-right__social-item">
-                <img src="/src/assets/icons/inst.svg" alt="inst" />
+                <img src={Inst} alt="inst" />
               </button>
               <button className="footer-right__social-item">
-                <img src="/src/assets/icons/tg.svg" alt="tg" />
+                <img src={Tg} alt="tg" />
               </button>
               <button className="footer-right__social-item">
-                <img src="/src/assets/icons/viber.svg" alt="viber" />
+                <img src={Viber} alt="viber" />
               </button>
             </div>
             <div>+7 (977) 666-63-77</div>

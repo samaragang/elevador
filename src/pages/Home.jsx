@@ -2,12 +2,13 @@ import React from 'react'
 import './home.css'
 import CatalogPreview from "../components/CatalogPreview/CatalogPreview";
 import ContactForm from "../components/ContactForm/ContactForm";
+import logo from "/logo-big.png"
 
 export default function Home() {
   return (
     <main className='home'>
       <div className='intro'>
-        <img src="logo-big.png" alt="elevador" />
+        <img src={logo} alt="elevador" />
       </div>
       <div className="container">
         <div className="home__inner">
