@@ -2,12 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-import Home from './pages/Home';
-import Lifts from './pages/Lifts';
-import Escalators from './pages/Escalators';
-import Parking from './pages/Parking';
-import OtherProducts from './pages/OtherProducts';
-import Contacts from './pages/Contacts.jsx';
+import Home from './pages/Home/Home.jsx';
+import Lifts from './pages/Lifts/Lifts.jsx';
+import Escalators from './pages/Escalators/Escalators.jsx';
+import Parking from './pages/Parking/Parking.jsx';
+import OtherProducts from './pages/OtherProducts/OtherProducts.jsx';
+import Contacts from './pages/Contacts/Contacts.jsx';
 
 function App() {
   return (

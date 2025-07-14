@@ -1,8 +1,8 @@
 import React from 'react'
 import './parking.css'
-import ContactForm from '../components/ContactForm/ContactForm'
-import CatalogPreview from '../components/CatalogPreview/CatalogPreview'
-import FullCatalogBox from '../components/FullCatalogBox/FullCatalogBox'
+import ContactForm from '../../components/ContactForm/ContactForm'
+import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
+import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
 import imgParking from '/src/assets/images/parking-white.png';
 
 export default function Parking() {

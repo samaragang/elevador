@@ -3,7 +3,7 @@ import './header.css'
 import { NavLink } from 'react-router-dom'
 export default function Header() {
   return (
-    <header>
+    <header className='header'>
       <div className="container">
         <div className="header__inner">
           <NavLink to='/elevador' className='header__logo'>

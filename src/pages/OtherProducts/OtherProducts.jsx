@@ -1,7 +1,7 @@
 import React from 'react'
 import './otherProducts.css'
-import ContactForm from '../components/ContactForm/ContactForm'
-import CatalogPreview from '../components/CatalogPreview/CatalogPreview'
+import ContactForm from '../../components/ContactForm/ContactForm'
+import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
 
 export default function OtherProducts() {
   return (

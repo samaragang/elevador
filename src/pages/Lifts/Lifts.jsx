@@ -1,13 +1,13 @@
 import React from 'react'
 import './lifts.css'
-import CatalogPreview from '../components/CatalogPreview/CatalogPreview'
-import FullCatalogBox from '../components/FullCatalogBox/FullCatalogBox'
+import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
+import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
 import imgLift1 from '/src/assets/images/lift1.jpg';
 import imgLift2 from '/src/assets/images/lift2.jpg';
 import imgLift3 from '/src/assets/images/lift3.jpg';
 import imgLift4 from '/src/assets/images/lift4.jpg';
 import imgLift5 from '/src/assets/images/lift5.jpg';
-import ContactForm from "../components/ContactForm/ContactForm";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 export default function Lifts() {
   return (

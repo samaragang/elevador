@@ -1,7 +1,7 @@
 import React from 'react'
 import './home.css'
-import CatalogPreview from "../components/CatalogPreview/CatalogPreview";
-import ContactForm from "../components/ContactForm/ContactForm";
+import CatalogPreview from "../../components/CatalogPreview/CatalogPreview";
+import ContactForm from "../../components/ContactForm/ContactForm";
 import logo from "/logo-big.png"
 
 export default function Home() {

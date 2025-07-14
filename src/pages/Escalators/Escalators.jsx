@@ -1,8 +1,8 @@
 import React from 'react'
 import './escalators.css'
-import ContactForm from '../components/ContactForm/ContactForm'
-import CatalogPreview from '../components/CatalogPreview/CatalogPreview'
-import FullCatalogBox from '../components/FullCatalogBox/FullCatalogBox'
+import ContactForm from '../../components/ContactForm/ContactForm'
+import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
+import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
 import imgEscalator from '/src/assets/images/escalator-white.png';
 
 export default function Escalators() {
