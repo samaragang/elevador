@@ -51,17 +51,7 @@
 }
 
 @media (max-width: 768px) {
-  .header__inner {
-    padding: 2rem 0;
-  }
-
   .header__nav {
     width: 45rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header__inner {
-    padding: 1.5rem 0;
   }
 }

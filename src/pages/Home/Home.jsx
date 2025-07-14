@@ -13,15 +13,13 @@ export default function Home() {
       <div className="container">
         <div className="home__inner">
           <section className="hero">
-
             <div className="hero-content">
               <h2 className='hero-content__title'>
-                <strong>ELEVADOR</strong> — лучшее решение <br />
-                для любой задумки
+                <strong>ELEVADOR</strong> — лучшее решение для любой задумки
               </h2>
-              <p className='hero-content__description'>
-                Мы уважаем наших клиентов, поэтому с трепетом относимся к каждой детали,<br /> стараемся подобрать лучший вариант и сделать все в кратчайшие сроки
-              </p>
+              <div className='hero-content__description'>
+                Мы уважаем наших клиентов, поэтому с трепетом относимся к каждой детали, стараемся подобрать лучший вариант и сделать все в кратчайшие сроки
+              </div>
             </div>
           </section>
           <CatalogPreview />

@@ -1,10 +1,10 @@
 .intro {
-  max-width: 1920px;
+  max-width: 192rem;
   width: 100%;
-  height: 720px;
+  height: 72rem;
   background-image: url('/intro-bg.png');
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -12,24 +12,70 @@
   margin: 0 auto;
 }
 
+.intro img {
+  width: 150rem;
+}
+
 .hero {
-  padding: 64px 0;
+  padding: 6.4rem 0;
 }
 
 .hero-content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   letter-spacing: 2.2px;
   font-weight: 500;
+  text-align: center;
 }
 
 .hero-content__title {
   font-family: "Unbounded", sans-serif;
-  font-size: 72px;
+  font-size: 7.2rem;
   color: var(--main-color);
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
 }
 
 .hero-content__description {
-  font-size: 32px;
+  width: 90%;
+  font-size: 3.2rem;
   color: black;
 }
+
+@media (max-width: 1440px) {}
+
+@media (max-width: 1200px) {
+  .intro img {
+    width: 100rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .intro {
+    height: 60rem;
+  }
+
+  .intro img {
+    width: 80rem;
+  }
+
+  .hero-content {
+    letter-spacing: 0.1px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro {
+    height: 50rem;
+  }
+
+  .hero-content__title {
+    font-size: 5rem;
+  }
+
+  .hero-content__description {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {}
