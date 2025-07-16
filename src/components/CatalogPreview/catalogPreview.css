@@ -1,22 +1,23 @@
 .catalog {
-  margin-bottom: 68px;
+  margin-bottom: 6.8rem;
 }
 
 .catalog-item {
-  width: 450px;
-  height: 565px;
+  max-width: 45rem;
+  width: 100%;
+  height: 56.5rem;
 }
 .catalog-item__content {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 24px;
+  padding: 2.4rem;
 }
 .catalog-item__image { 
-  width: 400px;
-  height: 360px;
-  border-radius: 8px; 
+  width: 40rem;
+  height: 36rem;
+  border-radius: 0.8rem; 
   overflow: hidden; 
  } 
   
@@ -28,13 +29,13 @@
 
  .catalog-item__title {
   color: #262626;
-  font-size: 40px;
+  font-size: 4rem;
   font-weight: 500;
-  margin-top: 24px;
+  margin-top: 2.4rem;
  }
  .catalog-item__description {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   color: #6A6B72;
-  margin-top: 16px;
+  margin-top: 1.6rem;
  }

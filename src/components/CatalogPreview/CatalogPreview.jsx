@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import './catalogPreview.css';
-import { Navigation } from "swiper/modules";
+import { Navigation, FreeMode } from "swiper/modules";
 import { NavLink } from "react-router-dom";
 import imgLift from '/src/assets/images/lift.png';
 import imgEscalator from '/src/assets/images/escalator.png';
@@ -22,7 +22,7 @@ const catalogData = [
     title: 'Эскалаторы и траволаторы',
     desc: 'Подъемные механизмы и ленты',
     img: imgEscalator,
-    link: "/escalators" 
+    link: "/escalators"
   },
   {
     title: 'Парковочные системы',
@@ -46,6 +46,15 @@ export default function CatalogPreview() {
         slidesPerView={'auto'}
         spaceBetween={16}
         // loop={true}
+        breakpoints={{
+          480: {
+            spaceBetween: 5,
+          },
+          1200: {
+            spaceBetween: 10,
+          }
+
+        }}
         modules={[Navigation]}
       >
 
