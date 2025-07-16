@@ -14,9 +14,9 @@ export default function Header() {
             <button className='header__nav-item'>
               О нас
             </button>
-            <button className='header__nav-item'>
+            <NavLink to='/lifts' className='header__nav-item'>
               Каталог
-            </button>
+            </NavLink>
             <NavLink to='/contacts' className='header__nav-item'>
               Контакты
             </NavLink>

@@ -31,7 +31,7 @@ function Footer() {
               </button>
             </div>
             <div>+7 (977) 666-63-77</div>
-            <div>elevador@gmail.com</div>
+            <div>elevador77@yandex.ru</div>
           </div>
         </div>
       </div>

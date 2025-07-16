@@ -16,14 +16,78 @@
   text-decoration: underline;
 }
 
-.passenger-lifts__cases-content {
-  display: flex;
-  gap: 1.6rem;
-}
-
 .passenger-lifts,
 .cargo-lifts,
 .hospital-lifts,
 .other-details {
   margin-bottom: 4.8rem;
 }
+
+.lift-swiper-item {
+  width: auto;
+}
+
+.lift-swiper-item img {
+  max-width: 26rem;
+  height: 39.2rem;
+}
+
+
+
+
+
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal__content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal__content .swiper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal__content .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal__content img {
+  max-width: 100%;
+  max-height: 65vh;
+  height: 100% ;
+  object-fit: contain;
+}
+
+.image-modal__close {
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
+

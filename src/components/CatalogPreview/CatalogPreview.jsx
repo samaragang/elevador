@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import './catalogPreview.css';
-import { Navigation, FreeMode } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import { NavLink } from "react-router-dom";
 import imgLift from '/src/assets/images/lift.png';
 import imgEscalator from '/src/assets/images/escalator.png';

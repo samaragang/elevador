@@ -11,8 +11,8 @@ export default function FullCatalogBox({ title, description, buttons }) {
             {description}, <br />подготовленной нашими поставщиками
           </div>
           <div className='full-catalog__buttons'>
-            {buttons.map((btn => (
-              <button className='primary-button'>
+            {buttons.map(((btn, i) => (
+              <button key={i} className='primary-button'>
                 {btn}
               </button>
             )))}

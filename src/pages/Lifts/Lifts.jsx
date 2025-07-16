@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import './lifts.css'
 import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
 import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
@@ -8,8 +8,51 @@ import imgLift3 from '/src/assets/images/lift3.jpg';
 import imgLift4 from '/src/assets/images/lift4.jpg';
 import imgLift5 from '/src/assets/images/lift5.jpg';
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+const liftsData = [
+  {
+    imgName: imgLift1
+  },
+  {
+    imgName: imgLift2
+  },
+  {
+    imgName: imgLift3
+  },
+  {
+    imgName: imgLift4
+  },
+  {
+    imgName: imgLift5
+  },
+]
 
 export default function Lifts() {
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+
+  const openImage = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const closeImage = () => {
+    setSelectedIndex(null);
+  };
+  useEffect(() => {
+    if (selectedIndex !== null) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedIndex]);
+
+
   return (
     <div className='lifts'>
       <div className="container">
@@ -42,13 +85,32 @@ export default function Lifts() {
             <div className='passenger-lifts__cases'>
               <div className='passenger-lifts__cases-title'>
                 Для ознакомления с моделями лифтов можно воспользоваться <a href="https://www.liftmach.by/catalog/passazhirskie-lifty/" target="_blank" rel="noopener noreferrer">конфигуратором</a></div>
-              <div className='passenger-lifts__cases-content'>
-                <img src={imgLift1} alt="lift1" />
-                <img src={imgLift2} alt="lift2" />
-                <img src={imgLift3} alt="lift3" />
-                <img src={imgLift4} alt="lift4" />
-                <img src={imgLift5} alt="lift5" />
-              </div>
+              <Swiper
+                slidesPerView={'auto'}
+                spaceBetween={5}
+                breakpoints={{
+                  480: {
+                    spaceBetween: 10,
+                  },
+                  1200: {
+                    spaceBetween: 16,
+                  }
+                }}
+                modules={[Navigation]}
+              >
+                {liftsData.map((item, index) => (
+                  <SwiperSlide key={index} className='lift-swiper-item'>
+                    <img
+                      src={item.imgName}
+                      alt="lift"
+                      onClick={() => openImage(index)}
+                      style={{ cursor: 'pointer' }}
+                    />
+
+
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </section>
           <section className="cargo-lifts">
@@ -87,6 +149,26 @@ export default function Lifts() {
           <ContactForm />
         </div>
       </div>
+      {selectedIndex !== null && (
+        <div className="image-modal" onClick={closeImage}>
+          <div className="image-modal__content" onClick={(e) => e.stopPropagation()}>
+            <Swiper
+              initialSlide={selectedIndex}
+              slidesPerView={1}
+              modules={[Navigation]}
+            >
+              {liftsData.map((item, idx) => (
+                <SwiperSlide key={idx}>
+                  <img src={item.imgName} alt="fullscreen lift" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+            <button className="image-modal__close" onClick={closeImage}>×</button>
+          </div>
+        </div>
+      )}
+
+
     </div>
   )
 }

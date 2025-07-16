@@ -13,7 +13,7 @@ export default function Contacts() {
               <span>Телефон:</span> +7 (977) 666-63-77
             </div>
             <div>
-              <span>Почта:</span> elevador@gmail.com
+              <span>Почта:</span> elevador77@yandex.ru
             </div>
             <div>
               <span>Режим работы:</span> 10:00-22:00, без выходных
