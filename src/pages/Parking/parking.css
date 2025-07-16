@@ -1,8 +1,26 @@
+@import url("/src/index.css");
+
 .parking {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .parking-info {
   display: flex;
-  gap: 24px;
+  gap: 2.4rem;
+}
+
+.parking-info img {
+  width: 57.8rem;
+}
+
+@media (max-width: 1440px) {
+  .parking-info {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .parking-info img {
+    width: 100%;
+  }
 }

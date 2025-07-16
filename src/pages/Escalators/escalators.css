@@ -1,8 +1,25 @@
+@import url("/src/index.css");
+
 .escalators {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .escalators-info {
   display: flex;
-  gap: 24px;
+  gap: 2.4rem;
+}
+
+.escalators-info img {
+  width: 57.8rem;
+}
+
+@media (max-width: 1440px) {
+  .escalators-info {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .escalators-info img {
+    width: 100%;
+  }
 }

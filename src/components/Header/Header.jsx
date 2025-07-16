@@ -6,7 +6,7 @@ export default function Header() {
     <header className='header'>
       <div className="container">
         <div className="header__inner">
-          <NavLink to='/elevador' className='header__logo'>
+          <NavLink to='/' className='header__logo'>
             <img src="logo.svg" alt="elevador" />
           </NavLink>
           <nav className='header__nav'>

@@ -93,6 +93,9 @@ html {
   html {
     font-size: 6.5px;
   }
+  .primary-button {
+    letter-spacing: 0;
+  }
 }
 
 @media (max-width: 992px) {

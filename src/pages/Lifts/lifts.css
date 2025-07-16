@@ -1,12 +1,14 @@
+@import url("/src/index.css");
+
 .lifts {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 .passenger-lifts__cases-title {
   color: var(--main-color);
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 .passenger-lifts__cases-title a {
@@ -16,12 +18,12 @@
 
 .passenger-lifts__cases-content {
   display: flex;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .passenger-lifts,
 .cargo-lifts,
 .hospital-lifts,
 .other-details {
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
 }
