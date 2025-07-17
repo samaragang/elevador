@@ -3,6 +3,7 @@ import './footer.css';
 import Inst from '/src/assets/icons/inst.svg'
 import Tg from '/src/assets/icons/tg.svg'
 import Viber from '/src/assets/icons/viber.svg'
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -10,11 +11,14 @@ function Footer() {
       <div className="container">
         <div className="footer__inner">
           <div className="footer-left">
-            <div className='footer-left__logo'>ELEVADOR</div>
+            <NavLink to='/' className='footer-left__logo'>ELEVADOR </NavLink>
             <div className="footer-left__nav">
-              <button className='footer-left__nav-item'>О нас</button>
-              <button className='footer-left__nav-item'>Каталог</button>
-              <button className='footer-left__nav-item'>Контакты</button>
+              <NavLink to='/lifts' className='footer-left__nav-item'>
+                Каталог
+              </NavLink>
+              <NavLink to='/contacts' className='footer-left__nav-item'>
+                Контакты
+              </NavLink>
             </div>
           </div>
 

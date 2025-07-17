@@ -11,9 +11,6 @@ export default function Header() {
             <img src={logo} alt="elevador" />
           </NavLink>
           <nav className='header__nav'>
-            <button className='header__nav-item'>
-              О нас
-            </button>
             <NavLink to='/lifts' className='header__nav-item'>
               Каталог
             </NavLink>
