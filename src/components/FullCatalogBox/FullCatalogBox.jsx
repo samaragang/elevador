@@ -12,7 +12,7 @@ export default function FullCatalogBox({ title, description, buttons }) {
           </div>
           <div className='full-catalog__buttons'>
             {buttons.map(((btn, i) => (
-              <button key={i} className='primary-button'>
+              <button key={i} className='primary-button' onClick={() => window.open(`/pdf/${btn}.pdf`, '_blank')}>
                 {btn}
               </button>
             )))}

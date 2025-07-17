@@ -2,7 +2,6 @@ import React from 'react'
 import './escalators.css'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
-import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
 import imgEscalator from '/src/assets/images/escalator-white.png';
 
 export default function Escalators() {
@@ -12,11 +11,11 @@ export default function Escalators() {
         <div className="escalators__inner">
           <CatalogPreview />
           <h3 className='block-title'>Эскалаторы и траволаторы</h3>
-          <FullCatalogBox
+          {/* <FullCatalogBox
             title='Полный каталог эскалаторов и траволаторов'
             description='С полным каталогом эскалаторов и траволаторов можно ознакомиться в презентации'
             buttons={['Каталог эскалаторов и траволаторов']}
-          />
+          /> */}
           <section className="escalators-info">
             <div>
               <h3 className="section-title">Эскалаторы</h3>

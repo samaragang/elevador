@@ -4,14 +4,19 @@
   font-size: 2.4rem;
 }
 
-.parking-info {
-  display: flex;
-  gap: 2.4rem;
-}
-
 .parking-info img {
   width: 57.8rem;
 }
+
+.parking-swiper-item {
+  width: auto;
+}
+
+.parking-swiper-item img {
+  width: auto;
+  height: 39.2rem;
+}
+
 
 @media (max-width: 1440px) {
   .parking-info {
