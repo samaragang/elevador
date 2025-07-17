@@ -52,7 +52,6 @@ export default function Lifts() {
     };
   }, [selectedIndex]);
 
-
   return (
     <div className='lifts'>
       <div className="container">

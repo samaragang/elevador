@@ -1,7 +1,9 @@
-import React from 'react'
-import './fullCatalogBox.css'
+import React from 'react';
+import './fullCatalogBox.css';
 
 export default function FullCatalogBox({ title, description, buttons }) {
+  const basename = import.meta.env.MODE === 'production' ? '/elevador' : '';
+
   return (
     <div className='full-catalog'>
       <div className="container">
@@ -11,14 +13,20 @@ export default function FullCatalogBox({ title, description, buttons }) {
             {description}, <br />подготовленной нашими поставщиками
           </div>
           <div className='full-catalog__buttons'>
-            {buttons.map(((btn, i) => (
-              <button key={i} className='primary-button' onClick={() => window.open(`/pdf/${btn}.pdf`, '_blank')}>
+            {buttons.map((btn, i) => (
+              <button
+                key={i}
+                className='primary-button'
+                onClick={() =>
+                  window.open(`${basename}/pdf/${btn}.pdf`, '_blank')
+                }
+              >
                 {btn}
               </button>
-            )))}
+            ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
