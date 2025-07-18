@@ -6,7 +6,7 @@ import logo from "/logo-big.png"
 
 export default function Home() {
   return (
-    <main className='home'>
+    <main className='page page--home'>
       <div className='intro'>
         <img src={logo} alt="elevador" />
       </div>
@@ -14,9 +14,9 @@ export default function Home() {
         <div className="home__inner">
           <section className="hero">
             <div className="hero-content">
-              <h2 className='hero-content__title'>
+              <h1>
                 <strong>ELEVADOR</strong> — лучшее решение для любой задумки
-              </h2>
+              </h1>
               <div className='hero-content__description'>
                 Мы уважаем наших клиентов, поэтому с трепетом относимся к каждой детали, стараемся подобрать лучший вариант и сделать все в кратчайшие сроки
               </div>

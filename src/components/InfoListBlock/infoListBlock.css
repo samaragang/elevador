@@ -1,0 +1,14 @@
+.info-list-block {
+  margin-bottom: 4.8rem;
+}
+
+.info-list-block__title {
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: 1.6rem;
+}
+
+.info-list-block__list li {
+  color: var(--second-color);
+  margin-left: 4rem;
+}

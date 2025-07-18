@@ -4,10 +4,10 @@ import ContactForm from '../../components/ContactForm/ContactForm'
 
 export default function Contacts() {
   return (
-    <div className='contacts'>
+    <main className='page page--contacts'>
       <div className="container">
         <div className="contacts__inner">
-          <h3 className='block-title'>Контакты</h3>
+          <h2>Контакты</h2>
           <div className='contacts-info'>
             <div>
               <span>Телефон:</span> +7 (977) 666-63-77
@@ -27,6 +27,6 @@ export default function Contacts() {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </main>
   )
 }

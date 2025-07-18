@@ -1,5 +1,4 @@
-// import React from 'react';
-
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,11 +40,10 @@ const catalogData = [
 export default function CatalogPreview() {
   return (
     <section className="catalog">
-      <h3 className='block-title'>Каталог</h3>
+      <h2>Каталог</h2>
       <Swiper
         slidesPerView={'auto'}
         spaceBetween={16}
-        // loop={true}
         breakpoints={{
           480: {
             spaceBetween: 5,
@@ -57,20 +55,18 @@ export default function CatalogPreview() {
         }}
         modules={[Navigation]}
       >
-
         {catalogData.map((item, index) => (
           <SwiperSlide className="catalog-item" key={index}>
             <NavLink className="catalog-item__content" to={item.link}>
               <div className="catalog-item__image">
                 <img src={item.img} alt={item.title} />
               </div>
-              <h4 className="catalog-item__title">{item.title}</h4>
+              <div className="catalog-item__title">{item.title}</div>
               <p className="catalog-item__description">{item.desc}</p>
             </NavLink>
           </SwiperSlide>
         ))}
       </Swiper>
-
     </section>
   );
 }

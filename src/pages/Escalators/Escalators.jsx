@@ -3,53 +3,48 @@ import './escalators.css'
 import ContactForm from '../../components/ContactForm/ContactForm'
 import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
 import imgEscalator from '/src/assets/images/escalator-white.png';
+import SectionHeader from '../../components/SectionHeader/SectionHeader';
+import InfoListBlock from '../../components/InfoListBlock/InfoListBlock';
 
 export default function Escalators() {
   return (
-    <div className='escalators'>
+    <main className='page page--escalators'>
       <div className="container">
         <div className="escalators__inner">
           <CatalogPreview />
-          <h3 className='block-title'>Эскалаторы и траволаторы</h3>
-          {/* <FullCatalogBox
-            title='Полный каталог эскалаторов и траволаторов'
-            description='С полным каталогом эскалаторов и траволаторов можно ознакомиться в презентации'
-            buttons={['Каталог эскалаторов и траволаторов']}
-          /> */}
+          <h2>Эскалаторы и траволаторы</h2>
           <section className="escalators-info">
             <div>
-              <h3 className="section-title">Эскалаторы</h3>
-              <div className="section-description">
-                Наши поэтажные эскалаторы отвечают мировым тенденциям мировой индустрии, являются безопасными, надежными и экономичными
-                в эксплуатации.
-              </div>
-              <div className='section-info'>
-                <div>Преимущества эскалаторов ОАО «Могилевлифтмаш»</div>
-                <ul className='section-info__lists'>
-                  <li> Встроенный привод не требует специальных помещений</li>
-                  <li>Шумовые характеристики снижены до уровня ведущих европейских производителей</li>
-                  <li>Все детали внешней отделки изготовлены из нержавеющей стали, современный дизайн</li>
-                  <li>Низкие затраты на содержание в течении  всего жизненного цикла</li>
-                  <li>Надежность и возможность круглосуточной работы</li>
-                  <li>Минимальное  воздействие на окружающую среду</li>
-                  <li>Удобство и безопасность пассажиров</li>
-                </ul>
-              </div>
+              <SectionHeader
+                title='Эскалаторы'
+                description='Наши поэтажные эскалаторы отвечают мировым тенденциям мировой индустрии, являются безопасными, надежными и экономичными в эксплуатации.'
+              />
+              <InfoListBlock
+                title='Преимущества эскалаторов ОАО «Могилевлифтмаш»'
+                items={[
+                  'Встроенный привод не требует специальных помещений',
+                  'Шумовые характеристики снижены до уровня ведущих европейских производителей',
+                  'Все детали внешней отделки изготовлены из нержавеющей стали, современный дизайн',
+                  'Низкие затраты на содержание в течении  всего жизненного цикла',
+                  'Надежность и возможность круглосуточной работы',
+                  'Минимальное  воздействие на окружающую среду',
+                  'Удобство и безопасность пассажиров'
+                ]}
+              />
             </div>
             <div>
               <img src={imgEscalator} alt="imgEscalator" />
             </div>
           </section>
-
-          <section className="cargo-lifts">
-            <h3 className="section-title">Траволаторы</h3>
-            <div className="section-description">
-              Наши траволаторы — движущаяся бесступенчатая полоса, которая позволяет ускорить или облегчить передвижение <br /> пешеходов — отвечают всем современным тенденциям, являются экономичными, безопасными и надежными.
-            </div>
+          <section>
+            <SectionHeader
+              title='Траволаторы'
+              description='Наши траволаторы — движущаяся бесступенчатая полоса, которая позволяет ускорить или облегчить передвижение пешеходов — отвечают всем современным тенденциям, являются экономичными, безопасными и надежными.'
+            />
           </section>
           <ContactForm />
         </div>
       </div>
-    </div>
+    </main>
   )
 }

@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './lifts.css'
+import InfoListBlock from '../../components/InfoListBlock/InfoListBlock';
+import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import CatalogPreview from '../../components/CatalogPreview/CatalogPreview'
 import FullCatalogBox from '../../components/FullCatalogBox/FullCatalogBox'
 import imgLift1 from '/src/assets/images/lift1.jpg';
@@ -8,166 +10,85 @@ import imgLift3 from '/src/assets/images/lift3.jpg';
 import imgLift4 from '/src/assets/images/lift4.jpg';
 import imgLift5 from '/src/assets/images/lift5.jpg';
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import ImageGalleryWithModal from '../../components/ImageGalleryWithModal/ImageGalleryWithModal';
 
-const liftsData = [
-  {
-    imgName: imgLift1
-  },
-  {
-    imgName: imgLift2
-  },
-  {
-    imgName: imgLift3
-  },
-  {
-    imgName: imgLift4
-  },
-  {
-    imgName: imgLift5
-  },
-]
+const liftsData = [imgLift1, imgLift2, imgLift3, imgLift4, imgLift5]
 
 export default function Lifts() {
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-
-  const openImage = (index) => {
-    setSelectedIndex(index);
-  };
-
-  const closeImage = () => {
-    setSelectedIndex(null);
-  };
-  useEffect(() => {
-    if (selectedIndex !== null) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [selectedIndex]);
-
   return (
-    <div className='lifts'>
+    <main className='page page--lifts'>
       <div className="container">
         <div className='lifts__inner'>
           <CatalogPreview />
-          <h3 className='block-title'>Лифты</h3>
+          <h2>Лифты</h2>
           <FullCatalogBox
             title='Полный каталог лифтов'
             description='С полным каталогом лифтов можно ознакомиться в презентации'
             buttons={['Общий каталог лифтов', 'Каталог лифтов MOVEL']}
           />
           <section className="passenger-lifts">
-            <h3 className="section-title">Пассажирские лифты</h3>
-            <div className="section-description">
-              Пассажирские лифты предназначены для установки в жилых домах, общественных и административных зданиях, гостиницах, банках и офисах.
-            </div>
-            <div className='section-info'>
-              <div>Наши лифты имеют:</div>
-              <ul className='section-info__lists'>
-                <li>Плавный ход и повышенную точность остановки</li>
-                <li>Комфортабельную кабину и пониженную шумность</li>
-                <li>Антивандальные панели управления и вызывные посты с подсветкой кнопок</li>
-                <li>Индикаторы направления движения и положения кабины</li>
-                <li>Микропроцессорную станцию управления</li>
-                <li>Частотное регулирование главного привода и привода дверей кабины</li>
-                <li>Светодиодное освещение</li>
-                <li>Индикация перегрузки кабины</li>
-              </ul>
-            </div>
+            <SectionHeader
+              title="Пассажирские лифты"
+              description="Пассажирские лифты предназначены для установки в жилых домах, общественных и административных зданиях, гостиницах, банках и офисах."
+            />
+            <InfoListBlock
+              title='Наши лифты имеют:'
+              items={[
+                'Плавный ход и повышенную точность остановки',
+                'Комфортабельную кабину и пониженную шумность',
+                'Антивандальные панели управления и вызывные посты с подсветкой кнопок',
+                'Индикаторы направления движения и положения кабины',
+                'Микропроцессорную станцию управления',
+                'Частотное регулирование главного привода и привода дверей кабины',
+                'Светодиодное освещение',
+                'Индикация перегрузки кабины',
+              ]}
+            />
             <div className='passenger-lifts__cases'>
               <div className='passenger-lifts__cases-title'>
                 Для ознакомления с моделями лифтов можно воспользоваться <a href="https://www.liftmach.by/catalog/passazhirskie-lifty/" target="_blank" rel="noopener noreferrer">конфигуратором</a></div>
-              <Swiper
-                slidesPerView={'auto'}
-                spaceBetween={5}
-                breakpoints={{
-                  480: {
-                    spaceBetween: 10,
-                  },
-                  1200: {
-                    spaceBetween: 16,
-                  }
-                }}
-                modules={[Navigation]}
-              >
-                {liftsData.map((item, index) => (
-                  <SwiperSlide key={index} className='lift-swiper-item'>
-                    <img
-                      src={item.imgName}
-                      alt="lift"
-                      onClick={() => openImage(index)}
-                      style={{ cursor: 'pointer' }}
-                    />
-
-
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+              <ImageGalleryWithModal images={liftsData} />
             </div>
           </section>
-          <section className="cargo-lifts">
-            <h3 className="section-title">Грузовые лифты</h3>
-            <div className="section-description">
-              Грузовые лифты предназначены для перевозки грузов с проводником и без него. Устанавливаются в общественных зданиях и на промышленных предприятиях (складах, магазинах, ресторанах и пр.).
-            </div>
-            <div className='section-info'>
-              <div>Указанные грузовые лифты:</div>
-              <ul className='section-info__lists'>
-                <li>Изготавливаются в обычном исполнении, выжимные и с монорельсом</li>
-                <li>Просты в монтаже и обслуживании</li>
-                <li>Имеют совершенную микропроцессорную станцию управления</li>
-                <li>Оснащены кабиной повышенной прочности</li>
-                <li>Двери кабины - сплошные раздвижные, двери шахты - распашные</li>
-              </ul>
-            </div>
+          <section>
+            <SectionHeader
+              title='Грузовые лифты'
+              description='Грузовые лифты предназначены для перевозки грузов с проводником и без него. Устанавливаются в общественных зданиях и на промышленных предприятиях (складах, магазинах, ресторанах и пр.).'
+            />
+            <InfoListBlock
+              title='Указанные грузовые лифты:'
+              items={[
+                'Изготавливаются в обычном исполнении, выжимные и с монорельсом',
+                'Просты в монтаже и обслуживании',
+                'Имеют совершенную микропроцессорную станцию управления',
+                'Оснащены кабиной повышенной прочности',
+                'Двери кабины - сплошные раздвижные, двери шахты - распашные'
+              ]}
+            />
           </section>
-          <section className='hospital-lifts'>
-            <h3 className="section-title">Больничные лифты</h3>
-            <div className="section-description">
-              Больничные лифты устанавливаются в лечебно-профилактических учреждениях. Они позволяют перевозить больных на каталке. Изготавливаются с проходной и непроходной кабиной.
-            </div>
+          <section>
+            <SectionHeader
+              title='Больничные лифты'
+              description=' Больничные лифты устанавливаются в лечебно-профилактических учреждениях. Они позволяют перевозить больных на каталке. Изготавливаются с проходной и непроходной кабиной.'
+            />
           </section>
-          <section className='other-details'>
-            <h3 className="section-title">Другие детали и виды работ</h3>
-            <div className='section-info'>
-              <ul className='section-info__lists'>
-                <li>Работы по модернизации лифтов, отработавших нормативный срок службы</li>
-                <li>Поставка лифтовых лебедок, камер видеонаблюдения</li>
-                <li>Смарт-технологии для лифтов</li>
-                <li>UV-печать на лифтовых кабинах</li>
-              </ul>
-            </div>
+          <section>
+            <SectionHeader
+              title='Другие детали и виды работ'
+            />
+            <InfoListBlock
+              items={[
+                'Работы по модернизации лифтов, отработавших нормативный срок службы',
+                'Поставка лифтовых лебедок, камер видеонаблюдения',
+                'Смарт-технологии для лифтов',
+                'UV-печать на лифтовых кабинах'
+              ]}
+            />
           </section>
           <ContactForm />
         </div>
       </div>
-      {selectedIndex !== null && (
-        <div className="image-modal" onClick={closeImage}>
-          <div className="image-modal__content" onClick={(e) => e.stopPropagation()}>
-            <Swiper
-              initialSlide={selectedIndex}
-              slidesPerView={1}
-              modules={[Navigation]}
-            >
-              {liftsData.map((item, idx) => (
-                <SwiperSlide key={idx}>
-                  <img src={item.imgName} alt="fullscreen lift" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <button className="image-modal__close" onClick={closeImage}>×</button>
-          </div>
-        </div>
-      )}
 
-
-    </div>
+    </main>
   )
 }

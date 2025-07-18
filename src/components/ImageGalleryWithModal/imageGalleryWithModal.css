@@ -1,0 +1,9 @@
+.image-gallery-swiper-item {
+  width: auto;
+}
+
+.image-gallery-swiper-item img {
+  /* max-width: 26rem; */
+  width: auto;
+  height: 39.2rem;
+}
