@@ -2,7 +2,6 @@ import React from 'react';
 import './fullCatalogBox.css';
 
 export default function FullCatalogBox({ title, description, buttons }) {
-  const basename = import.meta.env.MODE === 'production' ? '/elevador' : '';
 
   return (
     <div className='full-catalog'>
@@ -18,7 +17,7 @@ export default function FullCatalogBox({ title, description, buttons }) {
                 key={i}
                 className='primary-button'
                 onClick={() =>
-                  window.open(`${basename}/pdf/${btn}.pdf`, '_blank')
+                  window.open(`pdf/${btn}.pdf`, '_blank')
                 }
               >
                 {btn}

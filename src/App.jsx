@@ -8,11 +8,9 @@ import Parking from './pages/Parking/Parking.jsx';
 import OtherProducts from './pages/OtherProducts/OtherProducts.jsx';
 import Contacts from './pages/Contacts/Contacts.jsx';
 
-const basename = import.meta.env.MODE === 'production' ? '/elevador' : '/';
-
 function App() {
   return (
-    <Router basename={basename}>
+    <Router>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
