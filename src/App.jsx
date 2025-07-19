@@ -7,6 +7,7 @@ import Escalators from './pages/Escalators/Escalators.jsx';
 import Parking from './pages/Parking/Parking.jsx';
 import OtherProducts from './pages/OtherProducts/OtherProducts.jsx';
 import Contacts from './pages/Contacts/Contacts.jsx';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/other-products" element={<OtherProducts />} />
         <Route path="/contacts" element={<Contacts />} />
       </Routes>
+      <ToastContainer position="top-right" autoClose={3000} />
       <Footer />
     </Router>
   );

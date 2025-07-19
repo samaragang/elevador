@@ -13,5 +13,5 @@ export default defineConfig({
       svgo: { plugins: [{ name: 'removeViewBox' }] },
       webp: { quality: 75 },
     }),],
-  base: '/',
+  base: './',
 })
