@@ -78,10 +78,6 @@ main {
   width: fit-content;
 }
 
-.primary-button:hover {
-  background-color: #0033a0;
-}
-
 .Toastify__toast {
   font-size: 1.5rem !important;
 }

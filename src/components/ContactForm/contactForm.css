@@ -15,19 +15,20 @@
 .contact-description {
   font-size: 2.4rem;
   font-weight: 500;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 1.8rem 1.6rem;
-  border: 1px solid #262626;
   border-radius: 1rem;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #6A6B72;
-  background-color: #fff;
+  border: 1px solid #262626;
+  background-color: white;
+  margin-top: 12px;
 }
 
 .contact-form textarea {
@@ -36,9 +37,34 @@
   margin-bottom: 3.2rem;
 }
 
+.contact-form .form__type-input-error {
+  margin-top: 0;
+  border: 1px solid #ff3030;
+  background-color: rgba(255, 48, 48, 0.1);
+}
+
+.form__error-active {
+  height: 12px;
+  display: block;
+  color: #FF8630;
+  font-size: 1.5rem;
+}
+
+.button-inactive {
+  cursor: not-allowed;
+  background-color: rgb(211 211 211 / 0.6);
+}
+
+.button-inactive:hover {
+  background-color: rgb(211 211 211);
+}
+
 .contact-row {
   display: flex;
   gap: 2rem;
+}
+.contact-row__item {
+  width: 100%;
 }
 
 .consent-text {
