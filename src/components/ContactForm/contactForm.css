@@ -28,7 +28,7 @@
   color: #6A6B72;
   border: 1px solid #262626;
   background-color: white;
-  margin-top: 12px;
+  margin-top: 1.2rem;
 }
 
 .contact-form textarea {
@@ -44,10 +44,10 @@
 }
 
 .form__error-active {
-  height: 12px;
+  height: 1.2rem;
   display: block;
   color: #FF8630;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .button-inactive {
